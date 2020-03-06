@@ -25,11 +25,10 @@
         android:layout_marginTop="20dp"
         android:layout_marginRight="20dp"
         android:inputType="textPersonName"
-        android:text="Home Team"
+        android:hint="FirstTeam"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <EditText
         android:id="@+id/away_team"
@@ -39,7 +38,7 @@
         android:layout_marginRight="20dp"
         android:layout_marginBottom="20dp"
         android:inputType="textPersonName"
-        android:text="Away Team"
+        android:hint="Second team"
         app:layout_constraintBottom_toTopOf="@+id/btn_team"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -52,32 +51,35 @@
         android:layout_marginRight="20dp"
         android:layout_marginBottom="20dp"
         android:text="Next"
+        android:onClick="handleNext"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:onClick="handleNext"/>
+        app:layout_constraintStart_toStartOf="parent" />
 
-    <ImageView
+    <de.hdodenhof.circleimageview.CircleImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/home_logo"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginTop="20dp"
+        android:background="@color/colorPrimary"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/home_team"
         app:srcCompat="@mipmap/ic_launcher_round"
-        android:onClick="handleAvatar1"/>
+        android:onClick="handleAva1"/>
 
-    <ImageView
+    <de.hdodenhof.circleimageview.CircleImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/away_logo"
         android:layout_width="100dp"
         android:layout_height="100dp"
+        android:background="@color/colorPrimary"
         app:layout_constraintBottom_toTopOf="@+id/away_team"
-
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/home_logo"
         app:srcCompat="@mipmap/ic_launcher_round"
-        android:onClick="handleAvatar2"/>
+        android:onClick="handleAva2"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
